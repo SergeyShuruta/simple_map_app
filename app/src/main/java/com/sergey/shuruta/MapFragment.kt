@@ -46,9 +46,9 @@ class MapFragment: Fragment(), OnMapReadyCallback, IMapListener {
         mMap.animateCamera(cu)
 
         imageUri?.let { uri ->
-            val btmDescriptor: BitmapDescriptor? = null
+            var btmDescriptor: BitmapDescriptor? = null
             try {
-                BitmapDescriptorFactory.fromBitmap(getBitmapFromUri(uri))
+                btmDescriptor = BitmapDescriptorFactory.fromBitmap(getBitmapFromUri(uri))
             } catch (e: Exception) {
                 e.printStackTrace()
             }
