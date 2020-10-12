@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <EditText
+        android:id="@+id/latEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Lat"
+        android:text="50.394053"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/lngEditText"
+        app:layout_constraintEnd_toStartOf="@+id/photoImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/lngEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Lng"
+        android:text="30.635672"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalLine"
+        app:layout_constraintEnd_toStartOf="@+id/setPhotoButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/cardview_dark_background"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/setPhotoButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/latEditText" />
+
+    <Button
+        android:id="@+id/setPhotoButton"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Set photo"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/horizontalLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/latEditText" />
+
+    <Button
+        android:id="@+id/goButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
